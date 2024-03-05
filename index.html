@@ -70,7 +70,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/mine/pricing_algo.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/pricing_algo.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 2-->
@@ -79,7 +79,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/mine/credit_card.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/credit_card.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 3-->
@@ -88,7 +88,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/mine/5_digit_transformer.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/5_digit_transformer.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 4-->
@@ -97,7 +97,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/mine/wordle.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/wordle.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 5-->
@@ -106,7 +106,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/mine/trisolaris.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/trisolaris.png" alt="..." />
                         </div>
                     </div>
                     <!-- Portfolio Item 6-->
@@ -115,7 +115,7 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/mine/imdb_reviews.png" alt="..." />
+                            <img class="img-fluid" src="assets/img/imdb_reviews.png" alt="..." />
                         </div>
                     </div>
                 </div>
@@ -260,13 +260,45 @@
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/mine/pricing_algo.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="text-uppercase mb-4">OVERVIEW</p>
-                                    <p class="mb-4">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+                                    <h4 class="text-primary text-uppercase mb-4">OVERVIEW</h4>
+                                    <p class="mb-3 text-start">
+                                        This project was done as part of a University College Lodnon and University of California, San Diego research effort. I contributed as an independent Python programmer tasked with writing an an automated price optimization algorithm. 
                                     </p>
+                                    <p class="mb-4 text-start">
+                                        My code is available on <a class="btn btn-outline-primary btn-social" href="https://github.com/Vileh/UCL_Pricing_Algorithm_Research_Study"><i class="fab fa-fw fa-github"></i></a>
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">TASK</h4>
+                                    <p class="mb-2 text-start">
+                                        I was tasked to write a pricing algorithm for an (anonymous) product available in different local markets whose prices are set on a daily basis. The data given contained information for a set of representative markets: a history of prices, sales, and cost of sales for the firm whose prices needed to be optimized, as well as an average of competitor prices and some vectors of market conditions. The algorithm was expected to recommended next-period prices that maximize:
+                                        </p>
+                                    <p class="mb-4">
+                                        <b>total firm profits = total sales x (price - per-unit cost)</b>.
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">RESULTS</h4>
+                                    <p class="mb-2 text-start">
+                                        When running the algorithm on the available data, we can calculate the expected profit when following the pricing algorithm. We were not given a validation set, so these results must be taken with a grain of salt. I managed to achieve an average increase of <b>40.48%</b> over the historical profits. The difference in the expected profits with the actual profits are plotted in the following histogram:
+                                    </p>
+                                    <img class="img-thumbnail rounded mb-4" src="assets/img/pricing_algo/output.png" alt="..." />
+                                    <h4 class="text-primary text-uppercase mb-4">SKILLS DEVELOPED</h4>
+                                    <h5 class="text-secondary mb-1 text-start">
+                                        Python:
+                                    </h5>
+                                    <ul class="text-start">
+                                        <li><b>Pandas</b> - data handling and transofrming</li>
+                                        <li><b>Numpy</b> - numerical operations</li>
+                                        <li><b>Matplotlib</b> - data visualisation</li>
+                                        <li><b>Scipy</b> - numerical optimization</li>
+                                    </ul>
+                                    <h5 class="text-secondary mb-1 text-start">
+                                        Statistics:
+                                    </h5>
+                                    <ul class="text-start">
+                                        <li><b>Logistic and polynomial regression</b> - modelling dependence between variables</li>
+                                        <li><b>Time series analysis</b> - analysing trends in data</li>
+                                        <li><b>Maximum Likelihood Estimation</b> - optimising profit function</li>
+                                    </ul>
+                                    <img class="img-thumbnail rounded mb-4" src="assets/img/pricing_algo/certificate_viktor.png" alt="..." />
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
