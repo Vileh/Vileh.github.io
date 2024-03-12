@@ -277,9 +277,20 @@
                                     </p>
                                     <h4 class="text-primary text-uppercase mb-4">RESULTS</h4>
                                     <p class="mb-2 text-start">
-                                        When running the algorithm on the available data, we can calculate the expected profit when following the pricing algorithm. We were not given a validation set, so these results must be taken with a grain of salt. I managed to achieve an average increase of <b>40.48%</b> over the historical profits. The difference in the expected profits with the actual profits are plotted in the following histogram:
+                                        When running the algorithm on the available data, we can calculate the expected profit when following the pricing algorithm. We were not given a validation set, so these results must be taken with a grain of salt. I managed to achieve an average increase of <b>40.49%</b> over the historical profits. The estimated % increase in profits can be seen in the following graph:
                                     </p>
-                                    <img class="img-thumbnail rounded mb-4" src="assets/img/pricing_algo/output.png" alt="..." />
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/pricing_algo/histogram.png" alt="..." style="width: 60%; height: auto;" />
+                                    </div>
+                                    <p class="mb-2 text-start">
+                                        As the competitor price is unknown at the time of picking our own price, the algorithm takes as inputs only the market conditions, our business's cost, and a bool variable signalling whether it is a weekday or the weekend. Here is a visualisation of the optimal price as a function of the market conditions (a higher number signifies worse market conditions):
+                                    </p>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/pricing_algo/optimal_price.png" alt="..." style="width: 60%; height: auto;" />
+                                    </div>
+                                    <p class="mb-4 text-start">
+                                        The price returned by the algorithm is significantly lower for weekends as opposed to weekdays. This is due to the fact that demand is lower on weekends, and the algorithm is trying to maximize profits by capturing a larger market share. On the other hand, the price is higher during the weekdays as this way higher profits can be obtained from the price-inelastic customers.
+                                    </p>
                                     <h4 class="text-primary text-uppercase mb-4">SKILLS DEVELOPED</h4>
                                     <h5 class="text-secondary mb-1 text-start">
                                         Python:
@@ -293,12 +304,15 @@
                                     <h5 class="text-secondary mb-1 text-start">
                                         Statistics:
                                     </h5>
-                                    <ul class="text-start">
+                                    <ul class="text-start mb-4">
                                         <li><b>Logistic and polynomial regression</b> - modelling dependence between variables</li>
                                         <li><b>Time series analysis</b> - analysing trends in data</li>
                                         <li><b>Maximum Likelihood Estimation</b> - optimising profit function</li>
                                     </ul>
-                                    <img class="img-thumbnail rounded mb-4" src="assets/img/pricing_algo/certificate_viktor.png" alt="..." />
+                                    <h4 class="text-primary text-uppercase mb-4">CERTIFICATE OF COMPLETION</h4>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/pricing_algo/certificate_viktor.png" alt="..." style="width: 80%; height: auto;" />
+                                    </div>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -320,17 +334,74 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">CREDIT CARD APPROVAL: CLASSIFICATION WITH RANDOM FOREST</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <h4 class="text-primary text-uppercase mb-4">OVERVIEW</h4>
+                                    <p class="mb-3 text-start">
+                                        This project was done for the final assessment of <i>MTH786P - Machine Learning with Python</i> at Queen Mary University of London. 
+                                    </p>
+                                    <p class="mb-2 text-start">
+                                        My code is available on <a class="btn btn-outline-primary btn-social" href="https://github.com/Vileh/QMUL-Data-Analytics-Courseworks/tree/main/ML"><i class="fab fa-fw fa-github"></i></a>
+                                    </p>
+                                    <p class="mb-4 text-start">
+                                        A detailed report on my work for this project can be found <a href="https://github.com/Vileh/QMUL-Data-Analytics-Courseworks/tree/main/ML/project_report.pdf">here</a>.
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">TASK</h4>
+                                    <p class="mb-4 text-start">
+                                        For this task we were given 6 datasets to choose from and apply the contents of the course to. I chose the credit card approval dataset which contained information on different individuals' credit card applications and outcomes of these applications. The task was to build a classification model that predicts whether an individual's application will be approved or not. 
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">IMPLEMENTED TECHNOLOGIES</h4>
+                                    <p class="mb-2 text-start">
+                                        The main part of the project was concerned with the implementation of a Random Forest classifier. The implemented algorithm can be accessed through my GitHub page. My implementation include the following features:
+                                        
+                                    </p>
+                                    <ul class="text-start">
+                                        <li><b>Bootstrapping</b></li>
+                                        <li><b>Multiple information gain functions</b> - entropy, gini, missclassification</li>
+                                        <li><b>K-Fold cross validation</b></li>
+                                        <li><b>Random Forest Parameters</b> - number of trees, max features, max depth, min smaples per split, and decision threshold</li>
+                                    </ul>
+                                    <p class="mb-4 text-start">
+                                        As an additional challenge, I implemented <b><i>SMOTE (Synthetic Minority Over-Sampling Technique)</i></b>. This is a technique used to balance the dataset by creating synthetic samples from the minority class. This is particularly useful in this case as the dataset is highly imbalanced - around 90% of the applications are successful. My implementation was based on the <a href="https://arxiv.org/abs/1106.1813">original paper</a> by Nitesh Chawla, Kevin W. Bowyer, Lawrence O. Hall, and W. Philip Kegelmeyer. To further validate my results considering the imbalanced dataset, I used the <b><i>F1 Score</i></b> measure of predictive performance.
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">RESULTS</h4>
+                                    <p class="mb-2 text-start">
+                                        I did multiple experiments with different model sizes and hyperparameters, as well as different degree of synthetic data injection.
+                                    </p>
+                                    <h5 class="text-secondary mb-1">
+                                        Compared parameters:
+                                    </h5>
+                                    <ul class="text-start">
+                                        <li><i><b>n_trees</b></i> - Number of trees in the random forest.</li>
+                                        <li><i><b>max_depth</b></i></b> - Maximum depth of each tree.</li>
+                                        <li><i><b>min_samples_split</b></i> - Minimum samples allowed in a split.</li>
+                                        <li><i><b>decision_threshold</b></i></b> - The value against which the average outcome of each split is compared to determine that split's prediction.</li>
+                                        <li><i><b>smote_N</b></i></b> - A parameter of the minority data injection algorithm (SMOTE) which refers to the number of new points generated for each real one.</li>
+                                    </ul>
+                                    <h5 class="text-secondary mb-1">
+                                        Model size:
+                                    </h5>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/random_forest/size_results.png" alt="..." style="width: 80%; height: auto;" />
+                                    </div>
+                                    <h5 class="text-secondary mb-1">
+                                        Decision threshold:
+                                    </h5>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/random_forest/dt_results.png" alt="..." style="width: 80%; height: auto;" />
+                                    </div>
+                                    <h5 class="text-secondary mb-1">
+                                        SMOTE data injection:
+                                    </h5>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/random_forest/smote_and_dt_results.png" alt="..." style="width: 80%; height: auto;" />
+                                    </div>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -360,7 +431,7 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/wordle/wordle-logo.webp" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
@@ -384,17 +455,21 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">INTRO TO PYTHON: WORDLE CONSOLE GAME</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <h4 class="text-primary text-uppercase mb-4">OVERVIEW</h4>
+                                    <p class="mb-3 text-start">
+                                        This was my first project in Python. Having written code for the last time in High School, in the second year of my undergraduate degree I decided to take on a new challenge and learn Python. Previously I had written code only in C++ and was familiar with the basics of programming. After spending some time learning the fundamentals of Python and solving basic problems, I decided to consodlidate all I had learned by coding WORDLE in the console.
+                                    </p>
+                                    <p class="mb-2 text-start">
+                                        My code is available on <a class="btn btn-outline-primary btn-social" href="https://github.com/Vileh/Wordle"><i class="fab fa-fw fa-github"></i></a>
+                                    </p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
