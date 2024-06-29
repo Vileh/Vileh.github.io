@@ -48,7 +48,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Data Analyst - Machine Learning - Quant</p>
+                <p class="masthead-subheading font-weight-light mb-0">Data Analyst - Machine Learning</p>
             </div>
         </header>
         <!-- Portfolio Section-->
@@ -134,8 +134,15 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">I am a Master's student in Data Analytics at Queen Mary University of London. </p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">I am a Master's student in Data Analytics at Queen Mary University of London, passionate about leveraging data to drive insights and innovation. With a strong foundation in mathematics and statistics, I am continuously expanding my skills in machine learning, data visualization, and programming.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">My academic journey has equipped me with expertise in Python, R, and SQL, along with experience in implementing various machine learning algorithms. I am particularly interested in the cutting-edge developments in artificial intelligence, especially in areas such as natural language processing and computer vision, aiming to contribute to the next generation of AI technologies.</p></div>
+                </div>
+                <!-- About Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="assets/Viktor_Penchev_CV.pdf">
+                        <i class="fas fa-download me-2"></i>
+                        Download CV
+                    </a>
                 </div>
             </div>
         </section>
@@ -153,59 +160,42 @@
                 <!-- Contact Section Form-->
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-xl-7">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form action="https://formspree.io/f/myyrjryq" method="POST">
+                        <form id="contactForm" action="https://formspree.io/f/myyrjryq" method="POST">
                             <input type="hidden" name="_subject" value="Contact request from personal website" />
                             <!-- Name input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." required />
                                 <label for="name">Full name</label>
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="_replyto" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" name="_replyto" type="email" placeholder="name@example.com" required />
                                 <label for="email">Email address</label>
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                             </div>
                             <!-- Phone number input-->
                             <div class="form-floating mb-3">
-                                <input class="form-control" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" />
+                                <label for="phone">Phone number (optional)</label>
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem" required></textarea>
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                             <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                 </div>
                             </div>
                             <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl" type="submit">Send</button>
+                            <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
                         </form>
                     </div>
                 </div>
@@ -214,7 +204,7 @@
         <!-- Footer-->
         <footer class="footer text-center">
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-center">
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Location</h4>
@@ -229,15 +219,6 @@
                         <h4 class="text-uppercase mb-4">Around the Web</h4>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/viktor-penchev/"><i class="fab fa-fw fa-linkedin-in"></i></a>
                         <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Vileh"><i class="fab fa-fw fa-github"></i></a>
-                    </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About Freelancer</h4>
-                        <p class="lead mb-0">
-                            Freelance is a free to use, MIT licensed Bootstrap theme created by
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
                     </div>
                 </div>
             </div>
@@ -344,7 +325,7 @@
                                     <!-- Portfolio Modal - Text-->
                                     <h4 class="text-primary text-uppercase mb-4">OVERVIEW</h4>
                                     <p class="mb-3 text-start">
-                                        This project was done for the final assessment of <i>MTH786P - Machine Learning with Python</i> at Queen Mary University of London. 
+                                        This project was done for the final assessment of <i>MTH786P - Machine Learning with Python</i> at Queen Mary University of London. The goal was to implement a binary classifier to predict the outcome of credit card applications using a dataset of approximately 1500 entries.
                                     </p>
                                     <p class="mb-2 text-start">
                                         My code is available on <a class="btn btn-outline-primary btn-social" href="https://github.com/Vileh/QMUL-Data-Analytics-Courseworks/tree/main/ML"><i class="fab fa-fw fa-github"></i></a>
@@ -354,54 +335,69 @@
                                     </p>
                                     <h4 class="text-primary text-uppercase mb-4">TASK</h4>
                                     <p class="mb-4 text-start">
-                                        For this task we were given 6 datasets to choose from and apply the contents of the course to. I chose the credit card approval dataset which contained information on different individuals' credit card applications and outcomes of these applications. The task was to build a classification model that predicts whether an individual's application will be approved or not. 
+                                        The main challenge was to build a Random Forest classifier to predict credit card application outcomes while addressing significant class imbalance in the dataset. This involved preprocessing the data, implementing the Random Forest algorithm from scratch, and exploring techniques to improve performance on imbalanced data. The dataset required extensive preprocessing, including handling missing values and feature engineering.
                                     </p>
                                     <h4 class="text-primary text-uppercase mb-4">IMPLEMENTED TECHNOLOGIES</h4>
                                     <p class="mb-2 text-start">
-                                        The main part of the project was concerned with the implementation of a Random Forest classifier. The implemented algorithm can be accessed through my GitHub page. My implementation include the following features:
-                                        
+                                        The project involved implementing several key components:
                                     </p>
                                     <ul class="text-start">
-                                        <li><b>Bootstrapping</b></li>
-                                        <li><b>Multiple information gain functions</b> - entropy, gini, missclassification</li>
-                                        <li><b>K-Fold cross validation</b></li>
-                                        <li><b>Random Forest Parameters</b> - number of trees, max features, max depth, min smaples per split, and decision threshold</li>
+                                        <li><b>Custom Random Forest Classifier:</b> Implemented from scratch, including decision trees with various impurity measures (entropy, Gini index, misclassification error) and bootstrap sampling</li>
+                                        <li><b>Hyperparameter Tuning:</b> Number of trees, max features, max depth, min samples per split, and decision threshold</li>
+                                        <li><b>K-Fold Cross-Validation:</b> For robust model evaluation, using 4 splits to ensure adequate representation of the minority class</li>
+                                        <li><b>SMOTE (Synthetic Minority Over-Sampling Technique):</b> To address class imbalance by creating synthetic samples of the minority class</li>
+                                        <li><b>F1 Score:</b> As an evaluation metric for imbalanced classification, providing a better measure of model performance than accuracy alone</li>
                                     </ul>
                                     <p class="mb-4 text-start">
-                                        As an additional challenge, I implemented <b><i>SMOTE (Synthetic Minority Over-Sampling Technique)</i></b>. This is a technique used to balance the dataset by creating synthetic samples from the minority class. This is particularly useful in this case as the dataset is highly imbalanced - around 90% of the applications are successful. My implementation was based on the <a href="https://arxiv.org/abs/1106.1813">original paper</a> by Nitesh Chawla, Kevin W. Bowyer, Lawrence O. Hall, and W. Philip Kegelmeyer. To further validate my results considering the imbalanced dataset, I used the <b><i>F1 Score</i></b> measure of predictive performance.
+                                        As an additional challenge, I implemented SMOTE based on the original paper by Chawla et al. This technique creates synthetic samples from the minority class to balance the dataset, which is particularly useful given the 9:1 ratio of accepted to rejected applications in our dataset.
                                     </p>
                                     <h4 class="text-primary text-uppercase mb-4">RESULTS</h4>
                                     <p class="mb-2 text-start">
-                                        I did multiple experiments with different model sizes and hyperparameters, as well as different degree of synthetic data injection.
+                                        I conducted several experiments to optimize the model's performance:
                                     </p>
                                     <h5 class="text-secondary mb-1">
-                                        Compared parameters:
+                                        Tree Size Comparison:
                                     </h5>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/random_forest/size_results.png" alt="Tree size comparison results" style="width: 80%; height: auto;" />
+                                    </div>
+                                    <p class="mb-2 text-start">
+                                        This experiment compared four different tree sizes, showing that larger trees performed better, with the medium-sized model (max_features=7, max_depth=15, min_samples_split=2) achieving the best balance of performance and complexity.
+                                    </p>
+                                    <h5 class="text-secondary mb-1">
+                                        Decision Threshold:
+                                    </h5>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/random_forest/dt_results.png" alt="Decision threshold results" style="width: 80%; height: auto;" />
+                                    </div>
+                                    <p class="mb-2 text-start">
+                                        This experiment explored the effect of adjusting the decision threshold to address class imbalance. Lower thresholds biased the model towards predicting rejections, potentially improving recall at the cost of precision.
+                                    </p>
+                                    <h5 class="text-secondary mb-1">
+                                        SMOTE and Decision Threshold:
+                                    </h5>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/random_forest/smote_and_dt_results.png" alt="SMOTE and decision threshold results" style="width: 80%; height: auto;" />
+                                    </div>
+                                    <p class="mb-4 text-start">
+                                        The final experiment combined SMOTE with different decision thresholds. The best performing model achieved an accuracy of 0.93 and an F1 Score of 0.64, using SMOTE (N=2 or N=4) with the default decision threshold. Interestingly, combining SMOTE with a lower decision threshold (0.2) led to overprediction of rejections, resulting in lower overall performance.
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">KEY FINDINGS</h4>
                                     <ul class="text-start">
-                                        <li><i><b>n_trees</b></i> - Number of trees in the random forest.</li>
-                                        <li><i><b>max_depth</b></i></b> - Maximum depth of each tree.</li>
-                                        <li><i><b>min_samples_split</b></i> - Minimum samples allowed in a split.</li>
-                                        <li><i><b>decision_threshold</b></i></b> - The value against which the average outcome of each split is compared to determine that split's prediction.</li>
-                                        <li><i><b>smote_N</b></i></b> - A parameter of the minority data injection algorithm (SMOTE) which refers to the number of new points generated for each real one.</li>
+                                        <li>Deeper trees performed better for this dataset, suggesting complex decision boundaries</li>
+                                        <li>SMOTE improved F1 Score without sacrificing accuracy, effectively addressing the class imbalance</li>
+                                        <li>The combination of SMOTE and adjusted decision thresholds requires careful tuning to avoid bias</li>
+                                        <li>The introduction of artificial samples significantly improved model performance, increasing the F1 Score from 0.43 to 0.64</li>
                                     </ul>
-                                    <h5 class="text-secondary mb-1">
-                                        Model size:
-                                    </h5>
-                                    <div style="display: flex; justify-content: center;">
-                                        <img class="img-thumbnail rounded mb-4" src="assets/img/random_forest/size_results.png" alt="..." style="width: 80%; height: auto;" />
-                                    </div>
-                                    <h5 class="text-secondary mb-1">
-                                        Decision threshold:
-                                    </h5>
-                                    <div style="display: flex; justify-content: center;">
-                                        <img class="img-thumbnail rounded mb-4" src="assets/img/random_forest/dt_results.png" alt="..." style="width: 80%; height: auto;" />
-                                    </div>
-                                    <h5 class="text-secondary mb-1">
-                                        SMOTE data injection:
-                                    </h5>
-                                    <div style="display: flex; justify-content: center;">
-                                        <img class="img-thumbnail rounded mb-4" src="assets/img/random_forest/smote_and_dt_results.png" alt="..." style="width: 80%; height: auto;" />
-                                    </div>
+                                    <h4 class="text-primary text-uppercase mb-4">SKILLS DEVELOPED</h4>
+                                    <ul class="text-start">
+                                        <li><b>Machine Learning:</b> Implementation of Random Forest algorithm from scratch, including various impurity measures</li>
+                                        <li><b>Data Preprocessing:</b> Handling missing values, feature engineering, and addressing class imbalance</li>
+                                        <li><b>Imbalanced Learning:</b> Applying SMOTE and adjusting decision thresholds to improve minority class prediction</li>
+                                        <li><b>Model Evaluation:</b> Using K-fold cross-validation and F1 Score for robust assessment of imbalanced data classification</li>
+                                        <li><b>Python Programming:</b> Implementing complex algorithms, data manipulation, and visualization</li>
+                                        <li><b>Experimental Design:</b> Planning and executing a series of experiments to systematically improve model performance</li>
+                                    </ul>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -423,17 +419,42 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">TRANSFORMER MODEL FOR 5-DIGIT ADDITION</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/wordle/wordle-logo.webp" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <h4 class="text-primary text-uppercase mb-4">OVERVIEW</h4>
+                                    <p class="mb-3 text-start">
+                                        This project involved implementing a GPT-like transformer model, inspired by <a href="https://www.youtube.com/watch?v=kCc8FmEb1nY&t=4739s">Andrej Karpathy's tutorial</a>. The goal was to train the model to perform addition of two 5-digit integers, with each digit represented as a single token.
+                                    </p>
+                                    <p class="mb-4 text-start">
+                                        My code is available on <a class="btn btn-outline-primary btn-social" href="#"><i class="fab fa-fw fa-github"></i></a>
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">TASK</h4>
+                                    <p class="mb-4 text-start">
+                                        The main objective was to create and train a transformer model capable of adding two 5-digit numbers. This task required understanding and implementing key concepts of transformer architecture, including attention mechanisms and positional encoding.
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">RESULTS</h4>
+                                    <p class="mb-2 text-start">
+                                        An interesting observation from the training process was the model's learning pattern. By analyzing the per-digit losses, it became evident that the model learned to calculate each digit independently and at different rates.
+                                    </p>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/5_digit_transformer.png" alt="Per-digit loss graph" style="width: 80%; height: auto;" />
+                                    </div>
+                                    <p class="mb-4 text-start">
+                                        The graph above illustrates the learning progression for each digit position. It shows how the model gradually improved its accuracy for different digit positions over the course of training.
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">SKILLS DEVELOPED</h4>
+                                    <ul class="text-start">
+                                        <li><b>Deep Learning</b> - Implementing and training transformer models</li>
+                                        <li><b>PyTorch</b> - Using PyTorch for model implementation and training</li>
+                                        <li><b>Data Analysis</b> - Interpreting training results and loss curves</li>
+                                        <li><b>Neural Network Architecture</b> - Understanding and applying transformer architecture concepts</li>
+                                    </ul>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -465,11 +486,66 @@
                                     <!-- Portfolio Modal - Text-->
                                     <h4 class="text-primary text-uppercase mb-4">OVERVIEW</h4>
                                     <p class="mb-3 text-start">
-                                        This was my first project in Python. Having written code for the last time in High School, in the second year of my undergraduate degree I decided to take on a new challenge and learn Python. Previously I had written code only in C++ and was familiar with the basics of programming. After spending some time learning the fundamentals of Python and solving basic problems, I decided to consodlidate all I had learned by coding WORDLE in the console.
+                                        This project marks my first venture into Python programming. After not coding since high school, I decided to challenge myself during the second year of my undergraduate studies by learning Python. Having previously only worked with C++, this project served as a practical application of my newly acquired Python skills.
                                     </p>
-                                    <p class="mb-2 text-start">
+                                    <p class="mb-4 text-start">
                                         My code is available on <a class="btn btn-outline-primary btn-social" href="https://github.com/Vileh/Wordle"><i class="fab fa-fw fa-github"></i></a>
                                     </p>
+                                    <h4 class="text-primary text-uppercase mb-4">TASK</h4>
+                                    <p class="mb-4 text-start">
+                                        The goal was to recreate the popular word game Wordle as a console application. This project aimed to consolidate my understanding of Python basics and apply them to create an interactive, text-based game.
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">IMPLEMENTED FEATURES</h4>
+                                    <p class="mb-2 text-start">
+                                        The Wordle console game includes several key features:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li><b>Random Word Selection:</b> Chooses a random 5-letter word from a predefined list for each game</li>
+                                        <li><b>User Input Handling:</b> Accepts and validates user guesses</li>
+                                        <li><b>Guess Evaluation:</b> Compares the user's guess with the target word and provides feedback</li>
+                                        <li><b>Colored Output:</b> Uses ANSI escape codes to color-code feedback in the console</li>
+                                        <li><b>Game State Tracking:</b> Keeps track of the number of guesses and game outcome</li>
+                                        <li><b>Replay Option:</b> Allows users to play multiple rounds</li>
+                                    </ul>
+                                    <h4 class="text-primary text-uppercase mb-4">IMPLEMENTATION DETAILS</h4>
+                                    <p class="mb-2 text-start">
+                                        Key aspects of the implementation include:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li><b>File I/O:</b> Reading the word list from a text file</li>
+                                        <li><b>String Manipulation:</b> Processing and comparing words</li>
+                                        <li><b>List Comprehensions:</b> Efficiently generating feedback on guesses</li>
+                                        <li><b>Control Structures:</b> Using loops and conditionals to manage game flow</li>
+                                        <li><b>Exception Handling:</b> Gracefully handling invalid inputs</li>
+                                    </ul>
+                                    <h4 class="text-primary text-uppercase mb-4">RESULTS</h4>
+                                    <p class="mb-2 text-start">
+                                        The final product is a fully functional Wordle game that runs in the console:
+                                    </p>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/wordle/console_output.png" alt="Wordle Console Game Output" style="width: 80%; height: auto;" />
+                                    </div>
+                                    <p class="mb-4 text-start">
+                                        Players can make guesses, receive color-coded feedback, and play multiple rounds. The game accurately mimics the core mechanics of the original Wordle game in a text-based format.
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">CHALLENGES AND LEARNING OUTCOMES</h4>
+                                    <ul class="text-start">
+                                        <li><b>Python Syntax:</b> Familiarized myself with Python's syntax and coding conventions</li>
+                                        <li><b>Data Structures:</b> Gained practical experience with Python's built-in data structures like lists and dictionaries</li>
+                                        <li><b>Console I/O:</b> Learned to create an interactive console application with colored output</li>
+                                        <li><b>Problem-Solving:</b> Developed algorithmic thinking to implement game logic</li>
+                                        <li><b>Code Organization:</b> Practiced structuring code into functions for better readability and maintainability</li>
+                                    </ul>
+                                    <h4 class="text-primary text-uppercase mb-4">FUTURE IMPROVEMENTS</h4>
+                                    <p class="mb-4 text-start">
+                                        Potential areas for enhancement include:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li>Implementing a graphical user interface (GUI) using a library like Pygame or Tkinter</li>
+                                        <li>Adding difficulty levels by varying word length or limiting the number of guesses</li>
+                                        <li>Incorporating a larger word database and ensuring all words are valid English words</li>
+                                        <li>Implementing a scoring system and leaderboard for multiple players</li>
+                                    </ul>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -491,17 +567,122 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">The Three-Body Problem: Stellar System Simulation</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <h4 class="text-primary text-uppercase mb-4">OVERVIEW</h4>
+                                    <p class="mb-3 text-start">
+                                        This project was completed as part of the MTH739P Computational Methods module at Queen Mary University of London. The task was to create a Python simulation of coplanar stellar systems with up to three stars, modeling various scenarios including stable orbits, chaotic behavior, and star mergers.
+                                    </p>
+                                    <p class="mb-4 text-start">
+                                        My code is available on <a class="btn btn-outline-primary btn-social" href="https://github.com/Vileh/QMUL-Data-Analytics-Courseworks/tree/main/Computational%20Methods"><i class="fab fa-fw fa-github"></i></a>
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">KEY FEATURES</h4>
+                                    <ul class="text-start">
+                                        <li>Simulation of two-body and three-body systems</li>
+                                        <li>Implementation of both point-like stars and "hypergiants" with collision mechanics</li>
+                                        <li>Visualization of orbital trajectories and phase diagrams</li>
+                                        <li>Comparison of two integration techniques: scipy's solve_ivp() and the midpoint method</li>
+                                        <li>Convergence analysis of the numerical methods</li>
+                                    </ul>
+                                    <h4 class="text-primary text-uppercase mb-4">IMPLEMENTATIONS</h4>
+                                    <h5 class="text-secondary mb-2 text-start">1. Two-Body System:</h5>
+                                    <p class="mb-3 text-start">
+                                        Implemented a stable two-body system with stars of mass ratio 1:2. The system demonstrates elliptical orbits and conservation of total momentum.
+                                    </p>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/trisolaris/two_body.png" alt="Two-body system" style="width: 60%; height: auto;" />
+                                    </div>
+                                    <h5 class="text-secondary mb-2 text-start">2. Three-Body Choreographies:</h5>
+                                    <p class="mb-3 text-start">
+                                        Simulated various three-body configurations, including:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li>Cris Moore's figure-eight solution</li>
+                                        <li>The "Butterfly III" configuration</li>
+                                        <li>The "Yin-Yang 2a" orbit</li>
+                                    </ul>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/trisolaris/three_body.png" alt="Three-body choreography" style="width: 60%; height: auto;" />
+                                    </div>
+                                    <h5 class="text-secondary mb-2 text-start">3. Hypergiant Simulations:</h5>
+                                    <p class="mb-3 text-start">
+                                        Modeled systems of hypergiants with collision mechanics. These simulations demonstrate star mergers and the conservation of mass and momentum during collisions.
+                                    </p>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/trisolaris/hypergiants.png" alt="Hypergiant collision" style="width: 60%; height: auto;" />
+                                    </div>
+                                    <h4 class="text-primary text-uppercase mb-4">NUMERICAL METHODS</h4>
+                                    <p class="mb-3 text-start">
+                                        The project involved implementing and comparing two numerical integration methods to solve the system of ordinary differential equations (ODEs) governing the stellar motions:
+                                    </p>
+                                    <h5 class="text-secondary mb-2 text-start">1. scipy's solve_ivp():</h5>
+                                    <p class="mb-3 text-start">
+                                        This built-in solver from SciPy uses adaptive step size control. For this project, the RK45 method (Dormand-Prince method) was employed, which is a fourth-order method with a fifth-order error estimator. Key features include:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li>Automatic step size adjustment for optimal balance between accuracy and computational efficiency</li>
+                                        <li>High accuracy, especially for smooth problems</li>
+                                        <li>Robust handling of stiff ODEs</li>
+                                    </ul>
+                                    <h5 class="text-secondary mb-2 text-start">2. Midpoint Method:</h5>
+                                    <p class="mb-3 text-start">
+                                        A custom implementation of the second-order Runge-Kutta method was developed. This method:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li>Uses a fixed step size</li>
+                                        <li>Provides a good balance between simplicity and accuracy</li>
+                                        <li>Is particularly well-suited for problems where the forces are velocity-dependent</li>
+                                    </ul>
+                                    <p class="mb-3 text-start">
+                                        The midpoint method was implemented as follows:
+                                    </p>
+                                    <pre><code>y(t + h) = y(t) + h * f(t + h/2, y(t) + (h/2) * f(t, y(t)))</code></pre>
+                                    <p class="mb-3 text-start">
+                                        Where y is the state vector, t is time, h is the step size, and f is the ODE function.
+                                    </p>
+                                    <h5 class="text-secondary mb-2 text-start">Comparison and Convergence Analysis:</h5>
+                                    <p class="mb-3 text-start">
+                                        A detailed comparison between solve_ivp() and the midpoint method was conducted:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li>solve_ivp() showed superior accuracy, especially for larger step sizes</li>
+                                        <li>The midpoint method required significantly smaller step sizes to achieve comparable accuracy</li>
+                                        <li>solve_ivp() handled the rapid changes in acceleration near close encounters more effectively</li>
+                                    </ul>
+                                    <p class="mb-3 text-start">
+                                        A convergence analysis was performed to verify the second-order accuracy of the midpoint method:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li>Multiple simulations were run with decreasing step sizes: 0.1, 0.05, 0.025, and 0.0125</li>
+                                        <li>The error was calculated as the Euclidean norm of the difference between solutions at consecutive step sizes</li>
+                                        <li>The error was plotted on a log scale against step size</li>
+                                        <li>For the shorter time interval (max_time = 50), the error decreased by approximately a factor of 4 when halving the step size, confirming second-order convergence</li>
+                                        <li>For longer simulations (max_time = 250), the convergence rate was less consistent, likely due to accumulated errors over many orbits</li>
+                                    </ul>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/trisolaris/convergence.png" alt="Convergence analysis" style="width: 80%; height: auto;" />
+                                    </div>
+                                    <p class="mb-3 text-start">
+                                        This analysis highlighted the trade-offs between accuracy and computational cost, and demonstrated the importance of choosing appropriate numerical methods and step sizes for different types of simulations.
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">SKILLS DEVELOPED</h4>
+                                    <ul class="text-start">
+                                        <li><b>Python programming:</b> Object-oriented design, numerical methods implementation</li>
+                                        <li><b>Scientific computing:</b> Solving ordinary differential equations, handling N-body problems</li>
+                                        <li><b>Data visualization:</b> Creating informative plots of orbital trajectories and phase diagrams</li>
+                                        <li><b>Physics simulation:</b> Modeling gravitational interactions and collision mechanics</li>
+                                        <li><b>Numerical analysis:</b> Comparing integration methods and analyzing convergence</li>
+                                    </ul>
+                                    <h4 class="text-primary text-uppercase mb-4">CONCLUSION</h4>
+                                    <p class="mb-4 text-start">
+                                        This project provided a deep dive into computational physics, combining theoretical knowledge of celestial mechanics with practical programming skills. The successful implementation of various stellar configurations and the analysis of numerical methods demonstrated a strong grasp of both the physical concepts and computational techniques involved in simulating complex dynamical systems.
+                                    </p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -523,17 +704,90 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">IMDb Movie Review and Watchlist App</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <h4 class="text-primary text-uppercase mb-4">OVERVIEW</h4>
+                                    <p class="mb-3 text-start">
+                                        This project was completed as part of the MTH 765P module at Queen Mary University of London. The goal was to create a Streamlit app that allows users to write reviews for movies, maintain a watch list, and explore their watch history through data visualization, using the IMDb Movies Dataset from Kaggle.
+                                    </p>
+                                    <p class="mb-4 text-start">
+                                        My code is available on <a class="btn btn-outline-primary btn-social" href="#"><i class="fab fa-fw fa-github"></i></a>
+                                    </p>
+                                    <h4 class="text-primary text-uppercase mb-4">KEY FEATURES</h4>
+                                    <ul class="text-start">
+                                        <li>Movie review writing and storage</li>
+                                        <li>Watch list management</li>
+                                        <li>Data visualization of user's movie watching habits</li>
+                                        <li>Integration with IMDb Movies Dataset</li>
+                                        <li>SQLite database for storing user data</li>
+                                    </ul>
+                                    <h4 class="text-primary text-uppercase mb-4">IMPLEMENTATIONS</h4>
+                                    <h5 class="text-secondary mb-2 text-start">1. Writing a Review:</h5>
+                                    <p class="mb-3 text-start">
+                                        Users can select a movie from a drop-down menu, specify the review date, provide a score (1-10), and write their review. The app checks for existing reviews and updates them if necessary.
+                                    </p>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/imdb_reviews/review_writing.png" alt="Review Writing Interface" style="width: 60%; height: auto;" />
+                                    </div>
+                                    <h5 class="text-secondary mb-2 text-start">2. Managing Watch List:</h5>
+                                    <p class="mb-3 text-start">
+                                        Users can add movies to their watch list. The app prevents adding movies that have already been reviewed.
+                                    </p>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/imdb_reviews/watch_list.png" alt="Watch List Management" style="width: 60%; height: auto;" />
+                                    </div>
+                                    <h5 class="text-secondary mb-2 text-start">3. Data Visualization:</h5>
+                                    <p class="mb-3 text-start">
+                                        The app provides various visualizations to help users analyze their movie-watching habits:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li>Scatter plot comparing user scores to IMDb ratings</li>
+                                        <li>Bar chart of most-watched movie genres</li>
+                                        <li>Line chart showing the number of movies watched monthly</li>
+                                    </ul>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/imdb_reviews/data_viz.png" alt="Data Visualization" style="width: 80%; height: auto;" />
+                                    </div>
+                                    <h4 class="text-primary text-uppercase mb-4">TECHNICAL IMPLEMENTATION</h4>
+                                    <h5 class="text-secondary mb-2 text-start">Database Structure:</h5>
+                                    <p class="mb-3 text-start">
+                                        The app uses SQLite to create and manage three tables:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li>movies: Stores information from the IMDb dataset</li>
+                                        <li>reviews: Stores user-written reviews</li>
+                                        <li>watchlist: Manages the user's watch list</li>
+                                    </ul>
+                                    <h5 class="text-secondary mb-2 text-start">Streamlit UI:</h5>
+                                    <p class="mb-3 text-start">
+                                        The user interface is built using Streamlit, providing an interactive and responsive experience. The app is divided into several tabs for different functionalities:
+                                    </p>
+                                    <ul class="text-start">
+                                        <li>Write a Review</li>
+                                        <li>Add to Watch List</li>
+                                        <li>View Reviews</li>
+                                        <li>View Watch List</li>
+                                        <li>Delete Entries</li>
+                                        <li>Analysis</li>
+                                    </ul>
+                                    <h4 class="text-primary text-uppercase mb-4">SKILLS DEVELOPED</h4>
+                                    <ul class="text-start">
+                                        <li><b>Python programming:</b> Streamlit, pandas, sqlite3, plotly</li>
+                                        <li><b>Database management:</b> SQLite operations, data modeling</li>
+                                        <li><b>Data visualization:</b> Creating interactive charts with plotly</li>
+                                        <li><b>Web application development:</b> Building a responsive UI with Streamlit</li>
+                                        <li><b>Data analysis:</b> Processing and visualizing user behavior data</li>
+                                    </ul>
+                                    <h4 class="text-primary text-uppercase mb-4">CONCLUSION</h4>
+                                    <p class="mb-4 text-start">
+                                        This project demonstrates the ability to create a full-stack web application that integrates database management, data analysis, and interactive visualization. It showcases skills in Python programming, web development with Streamlit, and data handling, providing a practical tool for movie enthusiasts to track and analyze their viewing habits.
+                                    </p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
