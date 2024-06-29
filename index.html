@@ -443,7 +443,7 @@
                                         An interesting observation from the training process was the model's learning pattern. By analyzing the per-digit losses, it became evident that the model learned to calculate each digit independently and at different rates.
                                     </p>
                                     <div style="display: flex; justify-content: center;">
-                                        <img class="img-thumbnail rounded mb-4" src="assets/img/5_digit_transformer.png" alt="Per-digit loss graph" style="width: 80%; height: auto;" />
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/transformer/per_digit_losses.png" alt="Per-digit loss graph" style="width: 80%; height: auto;" />
                                     </div>
                                     <p class="mb-4 text-start">
                                         The graph above illustrates the learning progression for each digit position. It shows how the model gradually improved its accuracy for different digit positions over the course of training.
@@ -519,14 +519,8 @@
                                         <li><b>Exception Handling:</b> Gracefully handling invalid inputs</li>
                                     </ul>
                                     <h4 class="text-primary text-uppercase mb-4">RESULTS</h4>
-                                    <p class="mb-2 text-start">
-                                        The final product is a fully functional Wordle game that runs in the console:
-                                    </p>
-                                    <div style="display: flex; justify-content: center;">
-                                        <img class="img-thumbnail rounded mb-4" src="assets/img/wordle/console_output.png" alt="Wordle Console Game Output" style="width: 80%; height: auto;" />
-                                    </div>
                                     <p class="mb-4 text-start">
-                                        Players can make guesses, receive color-coded feedback, and play multiple rounds. The game accurately mimics the core mechanics of the original Wordle game in a text-based format.
+                                        The final product is a fully functional Wordle game that runs in the console. Players can make guesses, receive color-coded feedback, and play multiple rounds. The game accurately mimics the core mechanics of the original Wordle game in a text-based format.
                                     </p>
                                     <h4 class="text-primary text-uppercase mb-4">CHALLENGES AND LEARNING OUTCOMES</h4>
                                     <ul class="text-start">
@@ -596,7 +590,7 @@
                                         Implemented a stable two-body system with stars of mass ratio 1:2. The system demonstrates elliptical orbits and conservation of total momentum.
                                     </p>
                                     <div style="display: flex; justify-content: center;">
-                                        <img class="img-thumbnail rounded mb-4" src="assets/img/trisolaris/two_body.png" alt="Two-body system" style="width: 60%; height: auto;" />
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/trisolaris/two_body_system.png" alt="Two-body system" style="width: 60%; height: auto;" />
                                     </div>
                                     <h5 class="text-secondary mb-2 text-start">2. Three-Body Choreographies:</h5>
                                     <p class="mb-3 text-start">
@@ -608,7 +602,7 @@
                                         <li>The "Yin-Yang 2a" orbit</li>
                                     </ul>
                                     <div style="display: flex; justify-content: center;">
-                                        <img class="img-thumbnail rounded mb-4" src="assets/img/trisolaris/three_body.png" alt="Three-body choreography" style="width: 60%; height: auto;" />
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/trisolaris/three_body_choreography.png" alt="Three-body choreography" style="width: 60%; height: auto;" />
                                     </div>
                                     <h5 class="text-secondary mb-2 text-start">3. Hypergiant Simulations:</h5>
                                     <p class="mb-3 text-start">
@@ -655,6 +649,9 @@
                                         <li>The midpoint method required significantly smaller step sizes to achieve comparable accuracy</li>
                                         <li>solve_ivp() handled the rapid changes in acceleration near close encounters more effectively</li>
                                     </ul>
+                                    <div style="display: flex; justify-content: center;">
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/trisolaris/comparison.png" alt="Comparison between methods" style="width: 80%; height: auto;" />
+                                    </div>
                                     <p class="mb-3 text-start">
                                         A convergence analysis was performed to verify the second-order accuracy of the midpoint method:
                                     </p>
@@ -733,7 +730,7 @@
                                         Users can select a movie from a drop-down menu, specify the review date, provide a score (1-10), and write their review. The app checks for existing reviews and updates them if necessary.
                                     </p>
                                     <div style="display: flex; justify-content: center;">
-                                        <img class="img-thumbnail rounded mb-4" src="assets/img/imdb_reviews/review_writing.png" alt="Review Writing Interface" style="width: 60%; height: auto;" />
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/imdb_reviews/write_review.png" alt="Review Writing Interface" style="width: 60%; height: auto;" />
                                     </div>
                                     <h5 class="text-secondary mb-2 text-start">2. Managing Watch List:</h5>
                                     <p class="mb-3 text-start">
@@ -752,7 +749,7 @@
                                         <li>Line chart showing the number of movies watched monthly</li>
                                     </ul>
                                     <div style="display: flex; justify-content: center;">
-                                        <img class="img-thumbnail rounded mb-4" src="assets/img/imdb_reviews/data_viz.png" alt="Data Visualization" style="width: 80%; height: auto;" />
+                                        <img class="img-thumbnail rounded mb-4" src="assets/img/imdb_reviews/imdb_vs_score.png" alt="Data Visualization" style="width: 80%; height: auto;" />
                                     </div>
                                     <h4 class="text-primary text-uppercase mb-4">TECHNICAL IMPLEMENTATION</h4>
                                     <h5 class="text-secondary mb-2 text-start">Database Structure:</h5>
